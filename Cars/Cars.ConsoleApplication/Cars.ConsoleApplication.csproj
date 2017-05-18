@@ -52,12 +52,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine.cs" />
+    <Compile Include="Factories\CarFactory.cs" />
+    <Compile Include="Factories\UserFactory.cs" />
+    <Compile Include="Interfaces\IEngine.cs" />
+    <Compile Include="Interfaces\ICarRepository.cs" />
+    <Compile Include="Interfaces\ICarFactory.cs" />
+    <Compile Include="Interfaces\IRead.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Interfaces\IUserFactory.cs" />
+    <Compile Include="Interfaces\IWrite.cs" />
+    <Compile Include="Repositories\CarRepository.cs" />
+    <Compile Include="IO\Read.cs" />
+    <Compile Include="IO\Write.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cars.Data\Cars.Data.csproj">
+      <Project>{8d5565df-5557-431e-ba7e-e24f079bb5a9}</Project>
+      <Name>Cars.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cars.Models\Cars.Models.csproj">
+      <Project>{84492f40-3fc2-41a3-ba3f-da2b91e111b1}</Project>
+      <Name>Cars.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
